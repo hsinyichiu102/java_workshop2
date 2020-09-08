@@ -31,8 +31,10 @@
 >
 >1. Implement a new class TreeDictionary that now stores the dictionary in your own tree implementation. It should support efficient search as well as efficient insertion of new words. In addition, TreeDictionary should support finding words when only some initial part of the signature (a prefix) is known. This is so that the user can see the part of the word they intend to type as they are typing.
 >The TreeDictionary class forms a recursive data structure, similar to, but more general than binary trees in the Worksheet 2 of this semester. This tree differs in that each node now has up to eight branches, one for each number (2-9) that is allowed in a signature. Each path of the tree (from the root to a node) represents a signature or part of a signature. At each node of the tree, you must store a collection of all the words that can possibly match the partial signature along the path. That means that every word that has a prefix corresponding to the partial signature appears in the collection. For example, if the dictionary has the words a, ant and any, then the words at nodes corresponding to paths would be as follows:
->* at node 2, we have a, ant and any, • atnode2,6,wehaveantandany. • atnode2,6,8,wehaveonlyant.
-Write a constructor for the class TreeDictionary that takes a String path to the dictionary and populates the tree with words.
->Write a method signatureToWords that returns, in a Set<String>, the matching words (and prefixes of words) for the given signature. The character length of each of the returned words or prefixes must be the same as the input signature.
+>* at node 2, we have a, ant and any, 
+>* atnode2,6,wehaveantandany. 
+>* atnode2,6,8,wehaveonlyant.
+> Write a constructor for the class TreeDictionary that takes a String path to the dictionary and populates the tree with words.
+> Write a method signatureToWords that returns, in a Set<String>, the matching words (and prefixes of words) for the given signature. The character length of each of the returned words or prefixes must be the same as the input signature.
 
 > 2. Create a program Sigs2WordsTree, similar to Sigs2WordsMap, that uses the TreeDictionary class. Compare the time taken to complete the execution of Sigs2WordsMap and Sigs2WordsTree with large inputs. Is it possible to make the time difference between Sigs2WordsList and Sigs2WordsMap or Sigs2WordsTree and Sigs2WordsMap noticeable? Again, make a note of the data you use and your timing results.
