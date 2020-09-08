@@ -13,15 +13,24 @@
 ##### Exercise 3: Depth of a node(10%)
 > static int depth(Tree<Integer> a, int x)
 	The depth of a node is defined as the length of the path (i.e. the number of edges) between the node and the root. For example, in the tree below, node 5 has a depth of 0, while node 6 has a depth of 2.Given a tree of integers a, which does not contain duplicates, and a node value x, write a recursive program which returns the depth of the given node value. Return −1 if the node value is not in the tree.
->             5
->            /\ 
->.          /. \ 
->.         /.   \
->.        /.     \
->.       3.       8
->.      /.\.     / 
->.     /.  \.   /
->     1.    4. 6
+
+>>             5
+
+>>            /\ 
+
+>>.          /. \ 
+
+>>.         /.   \
+
+>>.        /.     \
+
+>>.       3.       8
+
+>>.      /.\.     / 
+
+>>.     /.  \.   /
+
+>>     1.    4. 6
 
 ##### Exercise 4: Preorder traversal (5%)
 > static<E> List<E> preorder(Tree<E> a)
@@ -56,13 +65,14 @@
 
 ### Part B: 
 ##### Height-balanced trees (AVL trees)
-> Height-balanced trees A height-balanced binary tree is a binary tree in which, for every node, the left and right subtrees have a difference in height of at most 1. Insertion/deletion in a height-balanced tree may in general destroy the height-balanced property. In that case, we can use the rotations discussed in lectures to rebalance the tree and obtain a height-balanced tree again. Please consult any Data Structures text book as well as online resources for reference material.
+> Height-balanced trees A height-balanced binary tree is a binary tree in which, for every node, the left and right subtrees have a difference in height of at most > Insertion/deletion in a height-balanced tree may in general destroy the height-balanced property. 
+> In that case, we can use the rotations discussed in lectures to rebalance the tree and obtain a height-balanced tree again. Please consult any Data Structures text book as well as online resources for reference material.
 
 ##### AVL trees A height-balanced binary search tree is called an “AVL tree” (named after its inventors, Adelson-Velsky and Landis).
 
 > For checking the height-balanced property of nodes after insertions/deletions, one needs an efficient method to obtain the height of a tree. Explicit calculation requires O(n) time, which is too expensive. For this purpose, the Tree class given to you has been extended with an instance variable to store the height of the tree: protected final int height;
 > It also has an instance method
->>>>    public int getHeight();
+>> public int getHeight();
 > that returns the stored height value.
 
 ##### Exercise 9: Checking for height-balanced property (5%)
@@ -70,8 +80,8 @@
 	Given a tree a (of an arbitrary element type E), check to see if it is height-balanced, returning a boolean value.
 
 ##### Exercise 10: Insertion/deletion with height-balancing (20%)
->>>>    static Tree<Integer> insertHB(Tree<Integer> a, int x)
->>>>    static Tree<Integer> deleteHB(Tree<Integer> a, int x)
+>>    static Tree<Integer> insertHB(Tree<Integer> a, int x)
+>>    static Tree<Integer> deleteHB(Tree<Integer> a, int x)
 >Write modified versions of insert and delete methods that maintain the height-balanced property of trees. You should assume that the input trees are height-balanced binary search trees and produce results that are height-balanced binary search trees.
 
 >Both methods should work in O(log n) time.
